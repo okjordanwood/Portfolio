@@ -1,0 +1,80 @@
+.projects-section {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: transparent;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 3rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  color: white;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 12px rgba(124, 249, 255, 0.2),
+    0 0 30px rgba(224, 153, 255, 0.15);
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #7cf9ff;
+  margin-bottom: 0.5rem;
+}
+
+.project-desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.project-icon {
+  color: #e099ff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.project-icon:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.custom-tech-icon {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+  background: #e099ff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
+}

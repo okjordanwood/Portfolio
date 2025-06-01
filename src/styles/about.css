@@ -1,0 +1,119 @@
+.about-section {
+  padding: 6rem 2rem 8rem;
+  text-align: center;
+  background: transparent;
+  scroll-margin-top: 12rem;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-weight: 800;
+  color: white;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.flip-card {
+  background: transparent;
+  width: 220px;
+  height: 280px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1.25rem;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.flip-card-front {
+  background: linear-gradient(145deg, #1e293b, #334155);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(145deg, #334155, #1e293b);
+}
+
+.about-links {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.about-links .icon {
+  font-size: 2.2rem;
+  color: #7cf9ff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about-links .icon:hover {
+  color: #e099ff;
+  transform: scale(1.2);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.social-icons a {
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+.social-icon {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+.social-icon.github {
+  color: white;
+}
+
+.social-icon.linkedin {
+  color: #0077b5;
+}

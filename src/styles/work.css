@@ -1,0 +1,120 @@
+.work-section {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: transparent;
+}
+
+.work-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.work-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1rem; /* keep left so markers align */
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #7cf9ff, #e099ff);
+  opacity: 0.4;
+  z-index: 0; /* send behind everything */
+}
+
+.work-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 3rem;
+  z-index: 1; /* above the line */
+}
+
+.work-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.work-marker {
+  position: absolute;
+  left: -2.4rem;
+  top: 2rem;
+  width: 14px;
+  height: 14px;
+  background: #7cf9ff;
+  border: 3px solid #1e293b;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 4px #7cf9ff, 0 0 8px #7cf9ff,
+    0 0 12px rgba(124, 249, 255, 0.6);
+}
+
+.work-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: left;
+  color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(124, 249, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-role {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #7cf9ff;
+}
+
+.work-company {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #e099ff;
+}
+
+.work-period {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1rem;
+}
+
+.work-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.timeline-logo {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+.zeus-logo {
+  filter: invert(28%) sepia(78%) saturate(1010%) hue-rotate(180deg)
+    brightness(105%) contrast(90%);
+  width: 120px;
+  margin-bottom: 0.5rem;
+}
+
+.doit-logo,
+.uofsc-logo {
+  width: 60px;
+  margin-bottom: 0.5rem;
+  object-fit: contain;
+}

@@ -1,0 +1,89 @@
+.skills-section {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.skill-group-container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 0 12px rgba(124, 249, 255, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.skill-group-container:hover {
+  box-shadow: 0 0 18px rgba(124, 249, 255, 0.15);
+}
+
+.skill-category {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #7cf9ff;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.skills-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 150px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 15px rgba(124, 249, 255, 0.3);
+}
+
+.skills-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #7cf9ff;
+}
+
+.circular-progress {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.circular-progress svg {
+  transform: rotate(-90deg);
+}
+
+.progress-bg {
+  fill: none;
+  stroke: #2c2c2c;
+  opacity: 0.3;
+}
+
+.progress {
+  fill: none;
+  stroke: #7cf9ff;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.skill-label {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 500;
+}
