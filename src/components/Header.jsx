@@ -11,6 +11,7 @@ export default function Header() {
         </a>
         <nav className="nav-links">
           <a href="#about">About</a>
+          <a href="#education">Education</a>
           <a href="#work">Work</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>

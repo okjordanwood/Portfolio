@@ -1,34 +1,49 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-import { BiLinkExternal } from "react-icons/bi";
-import "../styles/projects.css";
+import { FiExternalLink } from "react-icons/fi";
 
-const ProjectsCard = ({ title, description, tags, link, repo }) => {
+export default function ProjectsCard({ project }) {
   return (
     <div className="project-card">
-      <h3 className="project-title">{title}</h3>
-      <p className="project-desc">{description}</p>
+      <div className="project-header">
+        <h3 className="project-title">{project.title}</h3>
+      </div>
+      <ul className="project-desc">
+        {project.description.map((point, index) => (
+          <li key={index}>{point}</li>
+        ))}
+      </ul>
       <div className="project-tags">
-        {tags.map((tag, idx) => (
-          <span className="project-tag" key={idx}>
+        {project.tags.map((tag, index) => (
+          <span key={index} className="project-tag">
             {tag}
           </span>
         ))}
       </div>
       <div className="project-links">
-        {repo && (
-          <a href={repo} target="_blank" rel="noopener noreferrer">
-            <FaGithub />
+        {project.repo && (
+          <a
+            href={project.repo}
+            target="_blank"
+            rel="noreferrer"
+            className="github-icon-link"
+            aria-label="GitHub repository"
+          >
+            <FaGithub className="github-icon" />
           </a>
         )}
-        {link && (
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            <BiLinkExternal />
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+            className="external-link-icon"
+            aria-label="Live site"
+          >
+            <FiExternalLink className="external-icon" />
           </a>
         )}
       </div>
     </div>
   );
-};
-
-export default ProjectsCard;
+}

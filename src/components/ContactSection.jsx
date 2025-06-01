@@ -38,32 +38,33 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="contact-section">
-      <div className="contact-header">
-        <h2>Let's Connect</h2>
-        <p>I’d love to hear from you! Feel free to reach out below.</p>
+    <section id="contact" className="contact-outer">
+      <div className="contact-section">
+        <div className="contact-header">
+          <h2>Let's Connect</h2>
+          <p>I’d love to hear from you! Feel free to reach out below.</p>
+        </div>
+
+        <form ref={form} onSubmit={sendEmail} className="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          />
+          <ReCAPTCHA
+            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+            ref={recaptchaRef}
+            className="recaptcha"
+          />
+          <button type="submit">Send</button>
+          {submitted && (
+            <span className="confirmation">Message sent successfully!</span>
+          )}
+        </form>
       </div>
-
-      <form ref={form} onSubmit={sendEmail} className="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required />
-
-        {console.log(
-          "RECAPTCHA SITE KEY:",
-          import.meta.env.VITE_RECAPTCHA_SITE_KEY
-        )}
-
-        <ReCAPTCHA
-          sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-          ref={recaptchaRef}
-          className="recaptcha"
-        />
-        <button type="submit">Send</button>
-        {submitted && (
-          <span className="confirmation">Message sent successfully!</span>
-        )}
-      </form>
     </section>
   );
 };

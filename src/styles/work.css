@@ -2,6 +2,8 @@
   padding: 6rem 2rem;
   text-align: center;
   background: transparent;
+  margin-bottom: 5rem;
+  scroll-margin-top: 14rem;
 }
 
 .work-timeline {
@@ -94,9 +96,24 @@
 }
 
 .work-description {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.6;
+  list-style: none;
+  padding-left: 0;
+}
+
+.work-description li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.work-description li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  color: #5eead4;
+  font-size: 1.25rem;
+  text-shadow: 0 0 6px rgba(94, 234, 212, 0.6), 0 0 10px rgba(94, 234, 212, 0.4);
 }
 
 .timeline-logo {
@@ -112,9 +129,8 @@
   margin-bottom: 0.5rem;
 }
 
-.doit-logo,
-.uofsc-logo {
-  width: 60px;
+.doit-logo {
+  width: 90px;
   margin-bottom: 0.5rem;
   object-fit: contain;
 }

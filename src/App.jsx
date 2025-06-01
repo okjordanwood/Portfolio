@@ -7,6 +7,7 @@ import WorkSection from "./components/WorkSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
+import EducationSection from "./components/EducationSection";
 
 const App = () => (
   <div className="app-grid">
@@ -16,6 +17,7 @@ const App = () => (
       <main className="main-content">
         <HeroSection />
         <AboutSection />
+        <EducationSection />
         <WorkSection />
         <SkillsSection />
         <ProjectsSection />

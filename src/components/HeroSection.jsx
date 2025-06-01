@@ -68,7 +68,9 @@ const HeroSection = () => {
             <span
               key={i}
               className="fade-letter"
-              style={{ animationDelay: `${i * 0.08}s` }}
+              style={{
+                animationDelay: `${i * 80}ms`, // ensure ms for compatibility
+              }}
             >
               {char}
             </span>

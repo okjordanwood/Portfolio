@@ -1,28 +1,35 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "./SectionHeader";
+import AboutCard from "./AboutCard";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "../styles/about.css";
 
 const cardData = [
   {
-    title: "👨‍💻 Developer",
-    content: "Passionate about building responsive and performant web apps.",
+    title: "👨‍💻 Software Developer",
+    content:
+      "I enjoy solving real problems through thoughtful design and reliable code — always with the user in mind.",
   },
   {
-    title: "🎓 CS Graduate",
+    title: "💡 Fast Learner",
     content:
-      "Graduated with a B.S. in Computer Science from the University of South Carolina",
+      "I pick up new tools and frameworks quickly and love experimenting with different ways to build smarter, better software.",
   },
   {
-    title: "🎨 UI/UX Focused",
+    title: "🚀 Project-Driven",
     content:
-      "Loves designing clean, intuitive interfaces with smooth animations.",
+      "I’ve led and contributed to projects like a 2D puzzle platformer, a responsive portfolio site, and a course management system.",
   },
   {
-    title: "🚀 Lifelong Learner",
+    title: "🎯 Detail-Oriented",
     content:
-      "Always exploring new technologies, frameworks, and best practices.",
+      "I care about writing clean code, solving problems the right way, and making sure everything works just right — front to back.",
+  },
+  {
+    title: "🤝 Team Player",
+    content:
+      "I work well in collaborative settings and enjoy sharing ideas, giving feedback, and solving problems as a team.",
   },
 ];
 
@@ -59,45 +66,41 @@ export default function AboutSection() {
         }}
       >
         {cardData.map((card, index) => (
-          <motion.div
+          <AboutCard
             key={index}
-            className={`flip-card ${flipped[index] ? "flipped" : ""}`}
+            title={card.title}
+            content={card.content}
+            flipped={flipped[index]}
             onClick={() => handleFlip(index)}
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <div className="flip-card-inner">
-              <div className="flip-card-front">{card.title}</div>
-              <div className="flip-card-back">{card.content}</div>
-            </div>
-          </motion.div>
+          />
         ))}
       </motion.div>
 
       <motion.div
-        className="social-icons"
+        className="project-links"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: true }}
+        style={{ marginTop: "3rem" }}
       >
         <a
           href="https://github.com/okjordanwood"
           target="_blank"
           rel="noopener noreferrer"
-          className="social-icon github"
+          className="github-icon-link"
+          aria-label="GitHub profile"
         >
-          <FaGithub />
+          <FaGithub className="github-icon" />
         </a>
         <a
           href="https://www.linkedin.com/in/jordan-wood-085274247/"
           target="_blank"
           rel="noopener noreferrer"
-          className="social-icon linkedin"
+          className="linkedin-icon-link"
+          aria-label="LinkedIn profile"
         >
-          <FaLinkedin />
+          <FaLinkedin className="linkedin-icon" />
         </a>
       </motion.div>
     </section>

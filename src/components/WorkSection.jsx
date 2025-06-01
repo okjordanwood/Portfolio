@@ -1,87 +1,54 @@
-import React, { useEffect, useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
-import "../styles/work.css";
+import React, { useEffect } from "react";
+import { useAnimation } from "framer-motion";
+import WorkCard from "./WorkCard";
 import SectionHeader from "./SectionHeader";
+import "../styles/work.css";
 
 const workItems = [
   {
-    logo: "/zeus.svg",
-    title: "Software Developer Intern",
+    title: "IT / Computer Science / Engineering Intern",
     company: "Zeus Industrial Products",
-    period: "May 2023 – August 2023",
-    description:
-      "Developed internal full-stack tools for automating workflow processes. Collaborated cross-functionally with manufacturing and R&D teams.",
-    logoClass: "zeus-logo",
+    period: "May 2024 – Dec 2024",
+    description: [
+      "Designed and scripted backend automation tools using PowerShell, improving deployment efficiency across internal systems.",
+      "Collaborated with IT and data teams on enterprise software development, contributing to backend logic integrated with Oracle databases.",
+      "Participated in planning and execution of software systems that support full‑stack infrastructure improvements.",
+    ],
+    logo: "/zeus.svg",
+    logoClass: "work-logo zeus-logo",
+    link: "https://www.zeusinc.com/",
   },
   {
-    logo: "/doit.svg",
-    title: "Software Developer Intern",
-    company: "Department of Information Technology",
-    period: "May 2022 – August 2022",
-    description:
-      "Worked on internal applications and dashboards for university administration. Assisted in debugging legacy systems and developing new tools in a collaborative team environment.",
-    logoClass: "doit-logo",
-  },
-  {
-    logo: "/uofsc.svg",
-    title: "Computer Science Graduate",
+    title: "DoIT Intern",
     company: "University of South Carolina",
-    period: "Graduated May 2024",
-    description:
-      "B.S. in Computer Science with focus in software engineering. Completed projects in web dev, algorithms, and system design.",
-    logoClass: "uofsc-logo",
+    period: "Apr 2022 – Aug 2022",
+    description: [
+      "Supported software setup and networking for campus‑wide systems; helped document network infrastructure for new deployments.",
+      "Built internal tools and mapped 200+ network devices using SSH and CLI tools to improve visibility across IT operations.",
+      "Gained full‑stack systems exposure while assisting in diagnosing issues within university‑wide server and IT environments.",
+    ],
+    logo: "/doit.svg",
+    logoClass: "work-logo doit-logo",
+    link: "https://sc.edu/about/offices_and_divisions/division_of_information_technology/about_us/",
   },
 ];
 
-const WorkSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+export default function WorkSection() {
   const controls = useAnimation();
 
   useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [isInView, controls]);
+    controls.start("visible");
+  }, [controls]);
 
   return (
-    <section className="work-section" id="work">
+    <section id="work" className="work-section section-screen">
       <SectionHeader title="Work Experience" />
-      <div className="work-timeline" ref={ref}>
+
+      <div className="work-timeline">
         {workItems.map((item, index) => (
-          <motion.div
-            key={index}
-            className="work-item"
-            initial="hidden"
-            animate={controls}
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.6, delay: index * 0.2 },
-              },
-            }}
-          >
-            <div className="work-marker" />
-            <div className="work-card">
-              {item.logo && (
-                <img
-                  src={item.logo}
-                  alt={`${item.company} logo`}
-                  className={item.logoClass}
-                />
-              )}
-              <h3 className="work-role">{item.title}</h3>
-              <p className="work-company">{item.company}</p>
-              <p className="work-period">{item.period}</p>
-              <p className="work-description">{item.description}</p>
-            </div>
-          </motion.div>
+          <WorkCard key={index} item={item} index={index} controls={controls} />
         ))}
       </div>
     </section>
   );
-};
-
-export default WorkSection;
+}

@@ -5,34 +5,58 @@ import "../styles/projects.css";
 
 const projects = [
   {
-    title: "To-Do App",
-    description:
-      "A feature-rich task manager built with React and Tailwind. Includes filtering, local storage sync, and a sleek UI.",
-    tags: ["React", "Tailwind", "JavaScript"],
+    title: "Interactive Todo Application",
+    description: [
+      "Built a full-stack task manager using React.js, Vite, and FantaCSS.",
+      "Implemented dynamic list creation, completion tracking, and local state management.",
+      "Styled for mobile-first design with accessible, responsive UI.",
+      "Simulated backend behavior with persistent local storage and efficient state handling.",
+    ],
+    tags: ["React", "Vite", "JavaScript", "FantaCSS"],
     link: "https://todope.netlify.app/",
     repo: "https://github.com/okjordanwood/Todo-App",
   },
   {
     title: "Portfolio Website",
-    description:
-      "A fully custom portfolio showcasing my frontend, backend, and full-stack projects. Built with animations and visual polish.",
-    tags: ["React", "Framer Motion", "CSS Modules"],
+    description: [
+      "Designed and developed a personal portfolio to showcase projects and skills.",
+      "Built with React, TailwindCSS, and Framer Motion for polished UI animations.",
+      "Implemented custom components, Netlify deployment pipeline, and accessibility features.",
+      "Highlighted full-stack understanding through form handling and modular architecture.",
+    ],
+    tags: [
+      "React",
+      "JSX",
+      "CSS",
+      "Vite",
+      "SimplexNoise",
+      "IntersectionObserver",
+      "Netlify",
+    ],
     link: null,
     repo: "https://github.com/okjordanwood/Portfolio",
   },
   {
-    title: "Capstone Project",
-    description:
-      "A cross-platform application built as part of a senior capstone team. Desktop-focused, involved team collaboration and agile processes.",
-    tags: ["GoDOT", "GDScript", "Tiled"],
+    title: "Gemini – Capstone Project",
+    description: [
+      "Developed a 2D platformer in Godot 4 with gravity manipulation mechanics.",
+      "Implemented object-oriented scripting for gameplay interactions and custom systems.",
+      "Designed modular game systems with unit testing and version control.",
+      "Led UX efforts including HUD design, scene transitions, and visual feedback.",
+    ],
+    tags: ["Godot", "GDScript", "Tiled", "Git"],
     link: null,
-    repo: null, // You’ll update this when the public fork is ready
+    repo: null,
   },
   {
-    title: "Large Language Model Chat Interface",
-    description:
-      "Worked with OpenAI APIs to create a functional chatbot with personalized prompts and custom memory features.",
-    tags: ["React", "OpenAI API", "Node.js"],
+    title: "Large Language Model System",
+    description: [
+      "Engineered a scalable backend Java application to manage academic coursework.",
+      "Applied design patterns (e.g., MVC, Singleton) for maintainable server-side architecture.",
+      "Integrated PostgreSQL for normalized, reliable data storage and retrieval.",
+      "Managed structured data for 1,000+ users with efficient query handling.",
+    ],
+    tags: ["Java", "PostgreSQL", "Design Patterns"],
     link: null,
     repo: null,
   },
@@ -40,11 +64,11 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="projects-section">
+    <section id="projects" className="projects-section section-screen">
       <SectionHeader title="Projects" />
       <div className="projects-grid">
         {projects.map((project, idx) => (
-          <ProjectsCard key={idx} {...project} />
+          <ProjectsCard key={idx} project={project} />
         ))}
       </div>
     </section>

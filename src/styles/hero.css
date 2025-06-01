@@ -11,11 +11,19 @@
   animation: fadeIn 1s ease-in-out;
   transition: opacity 0.5s ease;
   scroll-snap-align: start;
+  position: relative;
 }
 
 .hero-section.fade-out {
   opacity: 0;
   pointer-events: none;
+}
+
+.hero-title,
+.hero-subtitle .static-label,
+.hero-desc,
+.scroll-indicator {
+  color: #ffffff;
 }
 
 .hero-title {
@@ -26,24 +34,31 @@
 
 .gradient-name {
   background: linear-gradient(to right, #00f5ff, #f471ff);
+  background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
-  color: #ffffff; /* fallback color if gradient fails */
   display: inline-block;
 }
 
 .fade-letter {
   opacity: 0;
   display: inline-block;
-  animation: fadeInLetter 0.6s forwards;
+  animation: fadeInLetter 0.6s ease forwards;
+  animation-fill-mode: forwards;
+  background: linear-gradient(to right, #00f5ff, #f471ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes fadeInLetter {
-  from {
+  0% {
     opacity: 0;
     transform: translateY(10px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -221,8 +236,8 @@
 
 .scroll-indicator {
   font-size: 2rem;
-  display: inline-block;
-  margin-top: 2rem;
+  position: absolute;
+  bottom: 12rem;
   animation: bounce 2s infinite;
   color: #7cf9ff;
   text-decoration: none;
@@ -241,4 +256,8 @@
   50% {
     transform: translateY(8px);
   }
+}
+
+.fallback-visible {
+  display: inline-block;
 }
