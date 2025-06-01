@@ -15,6 +15,7 @@ export default function Header() {
           <a href="#work">Work</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
           <a
             href="/Jordan-Wood-Resume.pdf"
             target="_blank"
@@ -22,7 +23,6 @@ export default function Header() {
           >
             Resume
           </a>
-          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>

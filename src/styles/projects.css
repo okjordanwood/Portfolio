@@ -1,9 +1,11 @@
 .projects-section {
+  font-family: inherit;
   padding: 6rem 2rem;
   background: transparent;
   text-align: center;
-  scroll-margin-top: 12rem;
+  scroll-margin-top: 6rem;
   margin-bottom: 6rem;
+  margin-top: 1.5rem;
 }
 
 .projects-grid {

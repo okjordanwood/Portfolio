@@ -1,15 +1,13 @@
 .contact-section {
   width: 100%;
-  max-width: 800px;
+  max-width: 960px;
   background: linear-gradient(to bottom, #0f172a, #1e293b);
-  padding: 4rem 2rem;
+  padding: 5rem 3rem;
   border-radius: 1rem;
   box-shadow: 0 0 30px rgba(124, 249, 255, 0.08);
   text-align: center;
   position: relative;
   z-index: 1;
-
-  /* ✅ Center the inner content */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +27,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: #0f172a;
+  scroll-margin-top: 5rem;
 }
 
 .contact-header h2 {

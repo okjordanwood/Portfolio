@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import SectionHeader from "./SectionHeader";
-import AboutCard from "./AboutCard";
+import SectionHeader from "../common/SectionHeader";
+import AboutCard from "../cards/AboutCard";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import "../styles/about.css";
+import "../../styles/about.css";
 
 const cardData = [
   {
@@ -45,7 +45,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section id="about" className="about-section section-screen">
+    <section id="about" className="about-section">
       <SectionHeader title="Meet Jordan" />
 
       <motion.div

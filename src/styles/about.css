@@ -1,10 +1,14 @@
 .about-section {
-  min-height: 50vh;
-  padding: 5rem 2rem 2rem;
-  scroll-margin-top: 6rem;
+  min-height: 48vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem 2rem;
+  scroll-margin-top: 7rem;
 }
 
 .about-title {
+  font-family: inherit;
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
   font-weight: 800;

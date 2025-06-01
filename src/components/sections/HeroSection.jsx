@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../styles/hero.css";
+import "../../styles/hero.css"; // fade-letter styles still live here
 import { motion, useScroll, useTransform } from "framer-motion";
+import { FiArrowDown } from "react-icons/fi";
 
 const roles = [
   "a Front-End Developer",
@@ -13,13 +14,14 @@ const roles = [
 
 const HeroSection = () => {
   const heroRef = useRef();
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  const [fadeState, setFadeState] = useState("fade-in");
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [fadeClass, setFadeClass] = useState("fadeIn");
 
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
   const translateY = useTransform(scrollY, [0, 300], [0, -50]);
 
+  // Scroll visibility logic
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -35,23 +37,19 @@ const HeroSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Role fade transition logic
   useEffect(() => {
-    let fadeTimeout, switchTimeout;
-    if (fadeState === "fade-in") {
-      fadeTimeout = setTimeout(() => {
-        setFadeState("fade-out");
-      }, 2500);
-    } else {
-      switchTimeout = setTimeout(() => {
-        setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
-        setFadeState("fade-in");
-      }, 500);
-    }
-    return () => {
-      clearTimeout(fadeTimeout);
-      clearTimeout(switchTimeout);
-    };
-  }, [fadeState]);
+    const interval = setInterval(() => {
+      setFadeClass("fadeOut");
+
+      setTimeout(() => {
+        setRoleIndex((i) => (i + 1) % roles.length);
+        setFadeClass("fadeIn");
+      }, 500); // must match fadeOut animation time
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const name = "Jordan";
 
@@ -68,9 +66,7 @@ const HeroSection = () => {
             <span
               key={i}
               className="fade-letter"
-              style={{
-                animationDelay: `${i * 80}ms`, // ensure ms for compatibility
-              }}
+              style={{ animationDelay: `${i * 80}ms` }}
             >
               {char}
             </span>
@@ -81,8 +77,8 @@ const HeroSection = () => {
 
       <h2 className="hero-subtitle">
         <span className="static-label">I am</span>
-        <span className={`highlighted-role ${fadeState}`}>
-          {roles[currentRoleIndex]}
+        <span className={`highlighted-role ${fadeClass}`}>
+          {roles[roleIndex]}
         </span>
       </h2>
 
@@ -92,7 +88,7 @@ const HeroSection = () => {
       </p>
 
       <a href="#about" className="scroll-indicator" aria-label="Scroll down">
-        ↓
+        <FiArrowDown />
       </a>
     </motion.section>
   );

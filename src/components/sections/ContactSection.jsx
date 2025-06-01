@@ -2,7 +2,8 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import { FiSend } from "react-icons/fi";
-import "../styles/contact.css";
+import { motion } from "framer-motion";
+import "../../styles/contact.css";
 
 const ContactSection = () => {
   const form = useRef();
@@ -40,7 +41,13 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="contact-outer">
-      <div className="contact-section">
+      <motion.div
+        className="contact-section"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <div className="contact-header">
           <h2>Let's Connect</h2>
           <p>I’d love to hear from you! Feel free to reach out below.</p>
@@ -67,7 +74,7 @@ const ContactSection = () => {
             <span className="confirmation">Message sent successfully!</span>
           )}
         </form>
-      </div>
+      </motion.div>
     </section>
   );
 };

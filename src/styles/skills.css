@@ -1,8 +1,9 @@
 .skills-section {
   padding: 6rem 2rem;
   text-align: center;
-  scroll-margin-top: 13rem;
-  margin-bottom: 6rem;
+  scroll-margin-top: 8rem;
+  margin-bottom: 3rem;
+  font-family: inherit;
 }
 
 .skills-grid {

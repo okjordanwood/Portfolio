@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "../styles/sectionHeader.css";
+import "../../styles/sectionHeader.css";
 
 const SectionHeader = ({ title }) => {
   return (
