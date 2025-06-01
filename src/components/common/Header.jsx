@@ -17,11 +17,11 @@ export default function Header() {
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
           <a
-            href="/Jordan-Wood-Resume.pdf"
+            href="/Jordan_Wood_Resume-Full-Stack.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Resume
+            Résumé
           </a>
         </nav>
       </div>
