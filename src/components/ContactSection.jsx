@@ -48,6 +48,12 @@ const ContactSection = () => {
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" rows="5" required />
+
+        {console.log(
+          "RECAPTCHA SITE KEY:",
+          import.meta.env.VITE_RECAPTCHA_SITE_KEY
+        )}
+
         <ReCAPTCHA
           sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
           ref={recaptchaRef}
