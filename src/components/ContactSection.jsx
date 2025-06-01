@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
+import { FiSend } from "react-icons/fi";
 import "../styles/contact.css";
 
 const ContactSection = () => {
@@ -59,7 +60,9 @@ const ContactSection = () => {
             ref={recaptchaRef}
             className="recaptcha"
           />
-          <button type="submit">Send</button>
+          <button type="submit" className="send-button">
+            Send Message <FiSend className="send-icon" />
+          </button>
           {submitted && (
             <span className="confirmation">Message sent successfully!</span>
           )}
