@@ -5,40 +5,50 @@ import "../styles/projects.css";
 
 const projects = [
   {
-    title: "Gemini – Capstone Project",
+    title: "To-Do App",
     description:
-      "A 2D platformer with gravity inversion mechanics. Developed using Godot with GDScript. Integrated complex physics behaviors and level design.",
-    technologies: ["godot", "gds", "git"],
+      "A feature-rich task manager built with React and Tailwind. Includes filtering, local storage sync, and a sleek UI.",
+    tags: ["React", "Tailwind", "JavaScript"],
+    link: "https://todope.netlify.app/",
+    repo: "https://github.com/okjordanwood/Todo-App",
   },
   {
-    title: "Interactive Todo App",
+    title: "Portfolio Website",
     description:
-      "Dynamic task management app with responsive UI. Built using React, styled with FantaCSS, and powered by Vite.",
-    technologies: ["react", "vite", "css", "js"],
+      "A fully custom portfolio showcasing my frontend, backend, and full-stack projects. Built with animations and visual polish.",
+    tags: ["React", "Framer Motion", "CSS Modules"],
+    link: null,
+    repo: "https://github.com/okjordanwood/Portfolio",
   },
   {
-    title: "Large Language Model",
+    title: "Capstone Project",
     description:
-      "Backend architecture for academic course tools. Utilized Java, Design Patterns, and PostgreSQL.",
-    technologies: ["java", "postgresql", "pattern"],
+      "A cross-platform application built as part of a senior capstone team. Desktop-focused, involved team collaboration and agile processes.",
+    tags: ["GoDOT", "GDScript", "Tiled"],
+    link: null,
+    repo: null, // You’ll update this when the public fork is ready
   },
   {
-    title: "Web Portfolio",
+    title: "Large Language Model Chat Interface",
     description:
-      "The site you're on now — modern, performant, and accessible. Built with React and TailwindCSS.",
-    technologies: ["react", "tailwind", "html", "js"],
+      "Worked with OpenAI APIs to create a functional chatbot with personalized prompts and custom memory features.",
+    tags: ["React", "OpenAI API", "Node.js"],
+    link: null,
+    repo: null,
   },
 ];
 
-export default function ProjectsSection() {
+const ProjectsSection = () => {
   return (
-    <section className="projects-section" id="projects">
+    <section id="projects" className="projects-section">
       <SectionHeader title="Projects" />
       <div className="projects-grid">
-        {projects.map((project, index) => (
-          <ProjectsCard key={index} {...project} />
+        {projects.map((project, idx) => (
+          <ProjectsCard key={idx} {...project} />
         ))}
       </div>
     </section>
   );
-}
+};
+
+export default ProjectsSection;

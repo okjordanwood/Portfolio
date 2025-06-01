@@ -1,13 +1,13 @@
 .projects-section {
   padding: 6rem 2rem;
-  text-align: center;
   background: transparent;
+  text-align: center;
 }
 
 .projects-grid {
   display: grid;
-  gap: 2.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   margin-top: 3rem;
   max-width: 1100px;
   margin-left: auto;
@@ -16,65 +16,67 @@
 
 .project-card {
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2rem;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  color: white;
-  text-align: left;
+  border-radius: 1rem;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  overflow: hidden;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 12px rgba(124, 249, 255, 0.2),
-    0 0 30px rgba(224, 153, 255, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px rgba(124, 249, 255, 0.2);
 }
 
 .project-title {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #7cf9ff;
   margin-bottom: 0.5rem;
+  color: #7cf9ff;
 }
 
 .project-desc {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 1.25rem;
-  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
-.project-tech {
+.project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  font-size: 1.5rem;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.project-icon {
-  color: #e099ff;
-  display: inline-flex;
-  align-items: center;
+.project-tag {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #7cf9ff;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-tag:hover {
+  background-color: rgba(124, 249, 255, 0.15);
+  box-shadow: 0 0 8px rgba(124, 249, 255, 0.4);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  transition: background 0.3s ease, transform 0.3s ease;
+  font-size: 1.4rem;
 }
 
-.project-icon:hover {
-  background: rgba(255, 255, 255, 0.1);
+.project-links a {
+  color: #7cf9ff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #e099ff;
   transform: scale(1.1);
-}
-
-.custom-tech-icon {
-  font-size: 0.75rem;
-  font-weight: bold;
-  color: #fff;
-  background: #e099ff;
-  padding: 0.3rem 0.5rem;
-  border-radius: 0.5rem;
 }

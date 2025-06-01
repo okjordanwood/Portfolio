@@ -65,7 +65,6 @@ const skillsData = [
         icon: "FaProjectDiagram",
       },
       { name: "Design Patterns", level: 75, icon: "FaCubes" },
-      { name: "MVC Architecture", level: 70, icon: "FaNetworkWired" },
       { name: "OOP", level: 75, icon: "FaCode" },
     ],
   },

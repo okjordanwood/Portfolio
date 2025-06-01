@@ -1,41 +1,34 @@
 import React from "react";
-import { FaReact, FaCss3Alt, FaHtml5, FaGitAlt, FaJava } from "react-icons/fa";
-import {
-  SiGodotengine,
-  SiPostgresql,
-  SiTailwindcss,
-  SiJavascript,
-  SiVite,
-} from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
+import { BiLinkExternal } from "react-icons/bi";
 import "../styles/projects.css";
 
-const iconMap = {
-  react: <FaReact />,
-  css: <FaCss3Alt />,
-  html: <FaHtml5 />,
-  git: <FaGitAlt />,
-  java: <FaJava />,
-  godot: <SiGodotengine />,
-  postgresql: <SiPostgresql />,
-  tailwind: <SiTailwindcss />,
-  js: <SiJavascript />,
-  vite: <SiVite />,
-  gds: <span className="custom-tech-icon">GDS</span>,
-  pattern: <span className="custom-tech-icon">DP</span>,
-};
-
-export default function ProjectsCard({ title, description, technologies }) {
+const ProjectsCard = ({ title, description, tags, link, repo }) => {
   return (
     <div className="project-card">
       <h3 className="project-title">{title}</h3>
       <p className="project-desc">{description}</p>
-      <div className="project-tech">
-        {technologies.map((tech, idx) => (
-          <span className="project-icon" key={idx}>
-            {iconMap[tech] || tech}
+      <div className="project-tags">
+        {tags.map((tag, idx) => (
+          <span className="project-tag" key={idx}>
+            {tag}
           </span>
         ))}
       </div>
+      <div className="project-links">
+        {repo && (
+          <a href={repo} target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+        )}
+        {link && (
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <BiLinkExternal />
+          </a>
+        )}
+      </div>
     </div>
   );
-}
+};
+
+export default ProjectsCard;
