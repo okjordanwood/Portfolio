@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Interactive Todo Application",
     description: [
-      "Built a full-stack task manager using React.js, Vite, and FantaCSS.",
+      "Built a front-end task manager using React.js, Vite, and FantaCSS.",
       "Implemented dynamic list creation, completion tracking, and local state management.",
       "Styled for mobile-first design with accessible, responsive UI.",
       "Simulated backend behavior with persistent local storage and efficient state handling.",
@@ -22,11 +22,12 @@ export const projects = [
     tags: [
       "React",
       "JSX",
-      "CSS",
+      "TailwindCSS",
       "Vite",
       "SimplexNoise",
       "IntersectionObserver",
       "Netlify",
+      "Framer Motion",
     ],
     link: null,
     repo: "https://github.com/okjordanwood/Portfolio",
