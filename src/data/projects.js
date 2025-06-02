@@ -52,7 +52,7 @@ export const projects = [
       "Integrated PostgreSQL for normalized, reliable data storage and retrieval.",
       "Managed structured data for 1,000+ users with efficient query handling.",
     ],
-    tags: ["Java", "PostgreSQL", "Design Patterns"],
+    tags: ["Java", "PostgreSQL", "Design Patterns", "OOP"],
     link: null,
     repo: null,
   },
