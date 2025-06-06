@@ -1,5 +1,57 @@
 export const projects = [
   {
+    title: "Large Language Model System",
+    description: [
+      "Engineered a scalable backend Java application to manage academic coursework.",
+      "Applied design patterns (e.g., MVC, Singleton) for maintainable server-side architecture.",
+      "Integrated PostgreSQL for normalized, reliable data storage and retrieval.",
+      "Managed structured data for 1,000+ users with efficient query handling.",
+    ],
+    tags: ["Java", "PostgreSQL", "Design Patterns", "OOP"],
+    link: null,
+    repo: "https://github.com/okjordanwood/Cock-Coders-Project",
+  },
+  {
+    title: "Pokedex",
+    description: [
+      "Built a frontend React application to explore and display Pokemon data using the PokeAPI.",
+      "Demonstrated REST API integration and data fetching with error handling.",
+      "Implemented responsive UI components with React hooks for state management and user interactions.",
+      "Integrated modern development tools including Vite for fast build performance and development server.",
+    ],
+    tags: [
+      "React",
+      "Vite",
+      "FantaCSS",
+      "PokeAPI",
+      "JavaScript",
+      "Frontend Development",
+    ],
+    link: "https://jordandex.netlify.app/",
+    repo: "https://github.com/okjordanwood/Pokedex",
+  },
+  {
+    title: "Portfolio Website",
+    description: [
+      "Designed and developed a personal portfolio to showcase projects and skills.",
+      "Built with React, TailwindCSS, and Framer Motion for polished UI animations.",
+      "Implemented custom components, Netlify deployment pipeline, and accessibility features.",
+      "Highlighted full-stack understanding through form handling and modular architecture.",
+    ],
+    tags: [
+      "React",
+      "JavaScript",
+      "TailwindCSS",
+      "Vite",
+      "SimplexNoise",
+      "IntersectionObserver",
+      "Netlify",
+      "Framer Motion",
+    ],
+    link: null,
+    repo: "https://github.com/okjordanwood/Portfolio",
+  },
+  {
     title: "Interactive Todo Application",
     description: [
       "Built a front-end task manager using React.js, Vite, and FantaCSS.",
@@ -12,27 +64,6 @@ export const projects = [
     repo: "https://github.com/okjordanwood/Todo-App",
   },
   {
-    title: "Portfolio Website",
-    description: [
-      "Designed and developed a personal portfolio to showcase projects and skills.",
-      "Built with React, TailwindCSS, and Framer Motion for polished UI animations.",
-      "Implemented custom components, Netlify deployment pipeline, and accessibility features.",
-      "Highlighted full-stack understanding through form handling and modular architecture.",
-    ],
-    tags: [
-      "React",
-      "JSX",
-      "TailwindCSS",
-      "Vite",
-      "SimplexNoise",
-      "IntersectionObserver",
-      "Netlify",
-      "Framer Motion",
-    ],
-    link: null,
-    repo: "https://github.com/okjordanwood/Portfolio",
-  },
-  {
     title: "Gemini – Capstone Project",
     description: [
       "Developed a 2D platformer in Godot 4 with gravity manipulation mechanics.",
@@ -41,19 +72,7 @@ export const projects = [
       "Led UX efforts including HUD design, scene transitions, and visual feedback.",
     ],
     tags: ["Godot", "GDScript", "Tiled", "Git"],
-    link: null,
-    repo: null,
-  },
-  {
-    title: "Large Language Model System",
-    description: [
-      "Engineered a scalable backend Java application to manage academic coursework.",
-      "Applied design patterns (e.g., MVC, Singleton) for maintainable server-side architecture.",
-      "Integrated PostgreSQL for normalized, reliable data storage and retrieval.",
-      "Managed structured data for 1,000+ users with efficient query handling.",
-    ],
-    tags: ["Java", "PostgreSQL", "Design Patterns", "OOP"],
-    link: null,
-    repo: null,
+    link: "https://okjordanwood.github.io/gemini/",
+    repo: "https://github.com/okjordanwood/gemini",
   },
 ];
