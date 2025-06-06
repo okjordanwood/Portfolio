@@ -161,3 +161,8 @@
   color: black;
   transform: scale(1.1);
 }
+
+.flip-card-back.smaller-text {
+  font-size: 0.85rem;
+  line-height: 1.3;
+}

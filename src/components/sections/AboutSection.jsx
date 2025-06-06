@@ -33,8 +33,15 @@ const cardData = [
   },
   {
     title: "🎸 Fun Fact",
-    content:
-      "Outside of coding, I'm a huge music fan and avid guitarist. I love digging into classic rock albums — my favorite is *Electric Ladyland* by Jimi Hendrix. I also enjoy gaming solo and with friends, and I've been making steady progress through the expert-level Minecraft modpack *Divine Journey 2* in my free time.",
+    content: (
+      <p>
+        Outside of coding, I'm a huge music fan and avid guitarist. I love
+        digging into classic rock albums, my favorite is{" "}
+        <em>Electric Ladyland</em> by Jimi Hendrix. I also enjoy gaming solo and
+        with friends, and I've been making steady progress through the
+        expert-level Minecraft modpack <em>Divine Journey 2</em>.
+      </p>
+    ),
   },
 ];
 

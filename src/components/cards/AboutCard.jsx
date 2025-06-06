@@ -13,7 +13,13 @@ export default function AboutCard({ title, content, flipped, onClick }) {
     >
       <div className="flip-card-inner">
         <div className="flip-card-front">{title}</div>
-        <div className="flip-card-back">{content}</div>
+        <div
+          className={`flip-card-back ${
+            title === "🎸 Fun Fact" ? "smaller-text" : ""
+          }`}
+        >
+          {content}
+        </div>
       </div>
     </motion.div>
   );
