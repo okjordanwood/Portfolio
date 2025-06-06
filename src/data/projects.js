@@ -12,7 +12,7 @@ export const projects = [
     repo: "https://github.com/okjordanwood/Cock-Coders-Project",
   },
   {
-    title: "Pokedex",
+    title: "Pokédex",
     description: [
       "Built a frontend React application to explore and display Pokemon data using the PokeAPI.",
       "Demonstrated REST API integration and data fetching with error handling.",
@@ -23,7 +23,7 @@ export const projects = [
       "React",
       "Vite",
       "FantaCSS",
-      "PokeAPI",
+      "PokéAPI",
       "JavaScript",
       "Frontend Development",
     ],
