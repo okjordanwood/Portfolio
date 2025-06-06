@@ -70,6 +70,7 @@ export const projects = [
       "Implemented object-oriented scripting for gameplay interactions and custom systems.",
       "Designed modular game systems with unit testing and version control.",
       "Led UX efforts including HUD design, scene transitions, and visual feedback.",
+      "Planned to be released on Steam some time in the future.",
     ],
     tags: ["Godot", "GDScript", "Tiled", "Git"],
     link: "https://okjordanwood.github.io/gemini/",
