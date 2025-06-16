@@ -9,7 +9,7 @@ export const projects = [
       "Used React, Vite, and FantaCSS for a modern, responsive UI with real-time stats updates.",
     ],
     tags: ["React", "Vite", "FantaCSS", "Firebase", "JavaScript", "Full-Stack"],
-    link: null,
+    link: "https://buzzlog.netlify.app/",
     repo: "https://github.com/okjordanwood/Coffee-Tracker",
   },
   {
@@ -21,7 +21,7 @@ export const projects = [
       "Managed structured data for 1,000+ users with efficient query handling.",
     ],
     tags: ["Java", "PostgreSQL", "Design Patterns", "OOP"],
-    link: "https://buzzlog.netlify.app/",
+    link: null,
     repo: "https://github.com/okjordanwood/Cock-Coders-Project",
   },
   {
