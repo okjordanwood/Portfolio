@@ -23,7 +23,7 @@ export default function EducationSection() {
         viewport={{ once: true }}
       >
         <div className="education-content-wrapper">
-          <a href="https://sc.edu/">
+          <a href="https://sc.edu/" target="_blank">
             <img
               src="/uofsc.svg"
               alt="University of South Carolina logo"
