@@ -67,7 +67,7 @@ export const projects = [
   {
     title: "Interactive Todo Application",
     description: [
-      "Built a front-end task manager using React.js, Vite, and FantaCSS.",
+      "Built a frontend task manager using React.js, Vite, and FantaCSS.",
       "Implemented dynamic list creation, completion tracking, and local state management.",
       "Styled for mobile-first design with accessible, responsive UI.",
       "Simulated backend behavior with persistent local storage and efficient state handling.",
