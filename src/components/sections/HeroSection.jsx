@@ -60,9 +60,9 @@ const HeroSection = () => {
       style={{ opacity, y: translateY }}
     >
       <h1 className="hero-title">
-        Hi, I'm{" "}
+        Hi, I'm{' '}
         <span className="gradient-name">
-          {name.split("").map((char, i) => (
+          {name.split('').map((char, i) => (
             <span
               key={i}
               className="fade-letter"
@@ -83,8 +83,7 @@ const HeroSection = () => {
       </h2>
 
       <p className="hero-desc">
-        Developer driven by curiosity, clean code, and crafting meaningful
-        digital experiences.
+        Aspiring Full-Stack Developer | I enjoy building useful web apps and love exploring new tech.
       </p>
 
       <a href="#about" className="scroll-indicator" aria-label="Scroll down">

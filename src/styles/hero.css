@@ -6,7 +6,8 @@
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 20vh;
   align-items: center;
   animation: fadeIn 1s ease-in-out;
   transition: opacity 0.5s ease;
@@ -243,7 +244,7 @@
   height: 2.75rem;
   font-size: 2rem;
   position: absolute;
-  bottom: 5rem;
+  bottom: 3rem;
   animation: bounce 2s infinite;
   background: white;
   color: #06b6d4;
