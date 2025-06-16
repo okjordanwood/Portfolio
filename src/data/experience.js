@@ -1,6 +1,6 @@
 export const workItems = [
   {
-    title: "IT / Computer Science / Engineering Intern",
+    title: "Engineering Intern (Software Focus)",
     company: "Zeus Industrial Products",
     period: "May 2024 – Dec 2024",
     description: [
