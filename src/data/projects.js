@@ -1,5 +1,18 @@
 export const projects = [
   {
+    title: "Coffee Tracker",
+    description: [
+      "Built a full-stack coffee tracking application to monitor caffeine intake and coffee consumption habits.",
+      "Implemented daily and weekly stats resets with time-based filtering for better tracking.",
+      "Created an organized history view with date grouping and toggling between recent and full history.",
+      "Integrated Firebase for user authentication and data persistence.",
+      "Used React, Vite, and FantaCSS for a modern, responsive UI with real-time stats updates.",
+    ],
+    tags: ["React", "Vite", "FantaCSS", "Firebase", "JavaScript", "Full-Stack"],
+    link: null,
+    repo: "https://github.com/okjordanwood/Coffee-Tracker",
+  },
+  {
     title: "Large Language Model System",
     description: [
       "Engineered a scalable backend Java application to manage academic coursework.",
@@ -8,7 +21,7 @@ export const projects = [
       "Managed structured data for 1,000+ users with efficient query handling.",
     ],
     tags: ["Java", "PostgreSQL", "Design Patterns", "OOP"],
-    link: null,
+    link: "https://buzzlog.netlify.app/",
     repo: "https://github.com/okjordanwood/Cock-Coders-Project",
   },
   {
