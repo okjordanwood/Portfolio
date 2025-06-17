@@ -13,7 +13,7 @@ export const projects = [
     repo: "https://github.com/okjordanwood/Coffee-Tracker",
   },
   {
-    title: "Large Language Model System",
+    title: "LMS - Learning Management System",
     description: [
       "Engineered a scalable backend Java application to manage academic coursework.",
       "Applied design patterns (e.g., MVC, Singleton) for maintainable server-side architecture.",
